@@ -26,6 +26,14 @@ public @Data class Direccion {
         this.distrito = datosDireccion.distrito();
     }
 
+    public Direccion actualizarDireccion(Direccion direccion) {
+        this.calle = direccion.getCalle();
+        this.numero = direccion.getNumero();
+        this.complemento = direccion.getComplemento();
+        this.distrito = direccion.getDistrito();
+        return this;
+    }
+
     public String getCalle() {
         return calle;
     }
