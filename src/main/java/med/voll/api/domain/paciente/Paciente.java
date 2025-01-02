@@ -16,7 +16,7 @@ import med.voll.api.domain.direccion.Direccion;
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
+    private Long id;
 
     private String nombre;
     private String email;
