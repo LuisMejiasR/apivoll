@@ -8,7 +8,6 @@ create table pacientes(
     distrito varchar(100) not null,
     complemento varchar(100),
     numero varchar(20),
-    ciudad varchar(100) not null,
 
     activo tinyint not null,
 

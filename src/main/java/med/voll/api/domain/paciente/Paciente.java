@@ -9,8 +9,6 @@ import med.voll.api.domain.direccion.Direccion;
 
 @Getter
 @EqualsAndHashCode(of = "id")
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity(name = "Paciente")
 @Table(name = "pacientes")
 public class Paciente {
@@ -26,6 +24,9 @@ public class Paciente {
     private Direccion direccion;
 
     private Boolean activo;
+
+    public Paciente() {
+    }
 
     public Paciente(DatosRegistroPaciente datos) {
         this.activo = true;
