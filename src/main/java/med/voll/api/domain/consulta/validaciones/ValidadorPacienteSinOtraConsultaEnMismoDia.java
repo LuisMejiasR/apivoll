@@ -16,7 +16,7 @@ public class ValidadorPacienteSinOtraConsultaEnMismoDia implements ValidadorDeCo
     public void validar(DatosReservaConsulta datos) {
         var primerHorario = datos.fecha().withHour(7);
         var ultimoHorario = datos.fecha().withHour(18);
-        var pacienteTieneOtraConsultaEnElDia = repository.existsByPacienteIdAndDataBetween(
+        var pacienteTieneOtraConsultaEnElDia = repository.existsByPacienteIdAndFechaBetween(
                 datos.idPaciente(),
                 primerHorario,
                 ultimoHorario);

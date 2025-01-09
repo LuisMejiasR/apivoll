@@ -14,7 +14,7 @@ public class ValidadorMedicoConOtraConsultaEnMismoHorario implements ValidadorDe
 
     @Override
     public void validar(DatosReservaConsulta datos) {
-        var medicoTieneOtraConsultaEnElMismoHorario = repository.existSByMedicoIdAndFecha(
+        var medicoTieneOtraConsultaEnElMismoHorario = repository.existsByMedicoIdAndFecha(
                 datos.idMedico(),
                 datos.fecha());
         if (medicoTieneOtraConsultaEnElMismoHorario) {
